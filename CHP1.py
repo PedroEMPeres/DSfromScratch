@@ -112,7 +112,7 @@ salaries_and_tenures = [(83000,8.7),(88000,8.1),
 
     #yearly salarie avg
 
-def tenure_bucket(tenute):
+def tenure_bucket(tenure):
     if tenure <2:
         return 'Less than two'
     elif tenure <5:
@@ -127,3 +127,8 @@ for salary, tenure in salaries_and_tenures:
 avg_salary_by_tenure = {tenure: sum(salaries)/len(salaries) for tenure, salaries in salary_by_tenure.items()}
 
 print(avg_salary_by_tenure)
+
+#paid bills
+
+def predict_paid_or_unpaid(years_experience):
+    return
