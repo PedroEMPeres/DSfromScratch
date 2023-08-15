@@ -129,6 +129,23 @@ avg_salary_by_tenure = {tenure: sum(salaries)/len(salaries) for tenure, salaries
 print(avg_salary_by_tenure)
 
 #paid bills
-
+#the whole idea was to create a model that predicts if the employee pays his bills or not, based on the data in the book
 def predict_paid_or_unpaid(years_experience):
+    if years_experience <=3:
+        return 'paid'
+    elif years_experience <8.5:
+        return 'unpaid'
+    else: 
+        return 'paid'
     return
+
+
+#interests
+#Returning to the interests, we might wante to list the interests sorting it by its count
+
+words_and_counts = Counter(word
+                           for user, interest in interests
+                           for word in interest.lower().split())
+for word, count in words_and_counts.most_common():
+    if count>1:
+        print(word,count)
