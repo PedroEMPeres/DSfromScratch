@@ -141,11 +141,10 @@ def predict_paid_or_unpaid(years_experience):
 
 
 #interests
-#Returning to the interests, we might wante to list the interests sorting it by its count
+#Returning to the interests, we might want to list the interests sorting it by its count
 
-words_and_counts = Counter(word
-                           for user, interest in interests
-                           for word in interest.lower().split())
+words_and_counts = Counter(word for user, interest in interests for word in interest.lower().split())
+
 for word, count in words_and_counts.most_common():
     if count>1:
         print(word,count)
